@@ -17,11 +17,75 @@
             <br>
             <input type="password" name="" id="" placeholder="Password" class="form-control">
             <br>
-            <button class="btn btn-success">Enter</button>
+            <button id="login" class="btn btn-success">Enter</button>
             
 
         </div>
     </div>
+
+    <div id="transection-area">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="deposit status">
+                    <h5>Deposit</h5>
+                    <h2>$00</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="withdraw status">
+                    <h5>Withdraw</h5>
+                    <h2>$00</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="balance status">
+                    <h5>Balance</h5>
+                    <h2>$1200</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="submit-area">
+                    <h4>Deposit</h4>
+                    <input type="text" class="form-control" name="" id="" placeholder="$ amount you want to deposit">
+                    <br>
+                    <button class="btn btn-success">Deposit</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="submit-area">
+                    <h4>Withdraw</h4>
+                    <input type="text" class="form-control" name="" id="" placeholder="$ amount you want to deposit">
+                    <br>
+                    <button class="btn btn-success">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+
+        const loginButton = document.getElementById('login');
+        loginButton.addEventListener('click', function(){
+            const loginArea = document.getElementById('login-area');
+            loginArea.style.display = 'none';
+            const transectionArea=document.getElementById('transection-area');
+            transectionArea.style.display = 'block'
+        })
+
+
+
+
+
+        // document.getElementById('login').addEventListener('click',function(){
+        //     const loginArea = document.getElementById('login-area');
+        //     loginArea.style.display = 'none';
+        // })
+    </script>
     
 </body>
 </html>
