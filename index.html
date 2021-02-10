@@ -128,12 +128,14 @@
         withdrawBtn.addEventListener('click', function(){
 
             const withdrawValue = getInputNumber("currentWithdraw");
+            updateSpanText("totalWithdraw", withdrawValue);
+            updateSpanText("currentBalance", -1* withdrawValue);
 
             
-            const withdrawTotal = document.getElementById("totalWithdraw").innerText;
-            const withdrawBalance = parseFloat(withdrawTotal);
-            const totalWidthrawBalance= withdrawValue + withdrawBalance;
-            document.getElementById("totalWithdraw").innerText = totalWidthrawBalance;
+            // const withdrawTotal = document.getElementById("totalWithdraw").innerText;
+            // const withdrawBalance = parseFloat(withdrawTotal);
+            // const totalWidthrawBalance= withdrawValue + withdrawBalance;
+            // document.getElementById("totalWithdraw").innerText = totalWidthrawBalance;
 
             document.getElementById('currentWithdraw').value = "";
 
