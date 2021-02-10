@@ -89,8 +89,10 @@
 
         const depositBtn = document.getElementById('addDeposit');
         depositBtn.addEventListener('click' , function(){
-            const depositAmount = document.getElementById('depositAmount').value;
-            const depositNumber = parseFloat(depositAmount);
+
+            const depositNumber = getInputNumber('depositAmount');
+            // const depositAmount = document.getElementById('depositAmount').value;
+            // const depositNumber = parseFloat(depositAmount);
 
             // const currentDeposit = document.getElementById('currentDeposit').innerText;
             // const currentDepositNumber = parseFloat(currentDeposit);
@@ -105,6 +107,12 @@
 
         })
 
+        function getInputNumber(id){
+            const inputNumber = document.getElementById(id).value;
+            const inputAmount = parseFloat(inputNumber);
+            return inputAmount;
+        }
+
         function updateSpanText(id, depositNumber){
 
             const currentBalance = document.getElementById(id).innerText;
@@ -118,12 +126,14 @@
 
         const withdrawBtn = document.getElementById('addWithdraw');
         withdrawBtn.addEventListener('click', function(){
-            const withdrawAmount = document.getElementById("currentWithdraw").value;
-            const withdrawValue = parseFloat(withdrawAmount);
+
+            const withdrawValue = getInputNumber("currentWithdraw");
+
+            
             const withdrawTotal = document.getElementById("totalWithdraw").innerText;
-            const withdrawbalance = parseFloat(withdrawTotal);
-            const totalwidthrawbalance= withdrawValue + withdrawbalance;
-            document.getElementById("totalWithdraw").innerText = totalwidthrawbalance;
+            const withdrawBalance = parseFloat(withdrawTotal);
+            const totalWidthrawBalance= withdrawValue + withdrawBalance;
+            document.getElementById("totalWithdraw").innerText = totalWidthrawBalance;
 
             document.getElementById('currentWithdraw').value = "";
 
